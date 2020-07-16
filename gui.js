@@ -196,7 +196,7 @@ IDE_Morph.prototype.init = function (isAutoFill) {
     this.globalVariables = new VariableFrame();
     this.currentSprite = new SpriteMorph(this.globalVariables);
     this.sprites = new List([this.currentSprite]);
-    this.currentCategory = 'motion';
+    this.currentCategory = 'control';
     this.currentTab = 'scripts';
     this.projectName = '';
     this.projectNotes = '';
@@ -1086,43 +1086,43 @@ IDE_Morph.prototype.createSpriteBar = function () {
     tab.fixLayout();
     tabBar.add(tab);
 
-    tab = new TabMorph(
-        tabColors,
-        null, // target
-        function () {tabBar.tabTo('costumes'); },
-        localize('Costumes'), // label
-        function () {  // query
-            return myself.currentTab === 'costumes';
-        }
-    );
-    tab.padding = 3;
-    tab.corner = tabCorner;
-    tab.edge = 1;
-    tab.labelShadowOffset = new Point(-1, -1);
-    tab.labelShadowColor = tabColors[1];
-    tab.labelColor = this.buttonLabelColor;
-    tab.drawNew();
-    tab.fixLayout();
-    tabBar.add(tab);
+    // tab = new TabMorph(
+    //     tabColors,
+    //     null, // target
+    //     function () {tabBar.tabTo('costumes'); },
+    //     localize('Costumes'), // label
+    //     function () {  // query
+    //         return myself.currentTab === 'costumes';
+    //     }
+    // );
+    // tab.padding = 3;
+    // tab.corner = tabCorner;
+    // tab.edge = 1;
+    // tab.labelShadowOffset = new Point(-1, -1);
+    // tab.labelShadowColor = tabColors[1];
+    // tab.labelColor = this.buttonLabelColor;
+    // tab.drawNew();
+    // tab.fixLayout();
+    // tabBar.add(tab);
 
-    tab = new TabMorph(
-        tabColors,
-        null, // target
-        function () {tabBar.tabTo('sounds'); },
-        localize('Sounds'), // label
-        function () {  // query
-            return myself.currentTab === 'sounds';
-        }
-    );
-    tab.padding = 3;
-    tab.corner = tabCorner;
-    tab.edge = 1;
-    tab.labelShadowOffset = new Point(-1, -1);
-    tab.labelShadowColor = tabColors[1];
-    tab.labelColor = this.buttonLabelColor;
-    tab.drawNew();
-    tab.fixLayout();
-    tabBar.add(tab);
+    // tab = new TabMorph(
+    //     tabColors,
+    //     null, // target
+    //     function () {tabBar.tabTo('sounds'); },
+    //     localize('Sounds'), // label
+    //     function () {  // query
+    //         return myself.currentTab === 'sounds';
+    //     }
+    // );
+    // tab.padding = 3;
+    // tab.corner = tabCorner;
+    // tab.edge = 1;
+    // tab.labelShadowOffset = new Point(-1, -1);
+    // tab.labelShadowColor = tabColors[1];
+    // tab.labelColor = this.buttonLabelColor;
+    // tab.drawNew();
+    // tab.fixLayout();
+    // tabBar.add(tab);
 
     tabBar.fixLayout();
     tabBar.children.forEach(function (each) {

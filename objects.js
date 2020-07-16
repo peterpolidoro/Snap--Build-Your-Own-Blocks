@@ -155,23 +155,23 @@ SpriteMorph.uber = PenMorph.prototype;
 
 SpriteMorph.prototype.categories =
     [
-        'motion',
+        // 'motion',
         'control',
-        'looks',
+        // 'looks',
         'sensing',
-        'sound',
+        // 'sound',
         'operators',
-        'pen',
+        // 'pen',
         'variables',
         'lists',
         'other'
     ];
 
 SpriteMorph.prototype.blockColor = {
-    motion : new Color(74, 108, 212),
-    looks : new Color(143, 86, 227),
-    sound : new Color(207, 74, 217),
-    pen : new Color(0, 161, 120),
+    // motion : new Color(74, 108, 212),
+    // looks : new Color(143, 86, 227),
+    // sound : new Color(207, 74, 217),
+    // pen : new Color(0, 161, 120),
     control : new Color(230, 168, 34),
     sensing : new Color(4, 148, 220),
     operators : new Color(98, 194, 19),
@@ -202,373 +202,373 @@ SpriteMorph.prototype.bubbleMaxTextWidth = 130;
 SpriteMorph.prototype.initBlocks = function () {
     SpriteMorph.prototype.blocks = {
 
-        // Motion
-        forward: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'motion',
-            spec: 'move %n steps',
-            defaults: [10]
-        },
-        turn: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'motion',
-            spec: 'turn %clockwise %n degrees',
-            defaults: [15]
-        },
-        turnLeft: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'motion',
-            spec: 'turn %counterclockwise %n degrees',
-            defaults: [15]
-        },
-        setHeading: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'motion',
-            spec: 'point in direction %dir'
-        },
-        doFaceTowards: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'motion',
-            spec: 'point towards %dst'
-        },
-        gotoXY: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'motion',
-            spec: 'go to x: %n y: %n',
-            defaults: [0, 0]
-        },
-        doGotoObject: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'motion',
-            spec: 'go to %dst'
-        },
-        doGlide: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'motion',
-            spec: 'glide %n secs to x: %n y: %n',
-            defaults: [1, 0, 0]
-        },
-        changeXPosition: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'motion',
-            spec: 'change x by %n',
-            defaults: [10]
-        },
-        setXPosition: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'motion',
-            spec: 'set x to %n',
-            defaults: [0]
-        },
-        changeYPosition: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'motion',
-            spec: 'change y by %n',
-            defaults: [10]
-        },
-        setYPosition: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'motion',
-            spec: 'set y to %n',
-            defaults: [0]
-        },
-        bounceOffEdge: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'motion',
-            spec: 'if on edge, bounce'
-        },
-        xPosition: {
-            only: SpriteMorph,
-            type: 'reporter',
-            category: 'motion',
-            spec: 'x position'
-        },
-        yPosition: {
-            only: SpriteMorph,
-            type: 'reporter',
-            category: 'motion',
-            spec: 'y position'
-        },
-        direction: {
-            only: SpriteMorph,
-            type: 'reporter',
-            category: 'motion',
-            spec: 'direction'
-        },
+        // // Motion
+        // forward: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'motion',
+        //     spec: 'move %n steps',
+        //     defaults: [10]
+        // },
+        // turn: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'motion',
+        //     spec: 'turn %clockwise %n degrees',
+        //     defaults: [15]
+        // },
+        // turnLeft: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'motion',
+        //     spec: 'turn %counterclockwise %n degrees',
+        //     defaults: [15]
+        // },
+        // setHeading: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'motion',
+        //     spec: 'point in direction %dir'
+        // },
+        // doFaceTowards: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'motion',
+        //     spec: 'point towards %dst'
+        // },
+        // gotoXY: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'motion',
+        //     spec: 'go to x: %n y: %n',
+        //     defaults: [0, 0]
+        // },
+        // doGotoObject: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'motion',
+        //     spec: 'go to %dst'
+        // },
+        // doGlide: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'motion',
+        //     spec: 'glide %n secs to x: %n y: %n',
+        //     defaults: [1, 0, 0]
+        // },
+        // changeXPosition: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'motion',
+        //     spec: 'change x by %n',
+        //     defaults: [10]
+        // },
+        // setXPosition: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'motion',
+        //     spec: 'set x to %n',
+        //     defaults: [0]
+        // },
+        // changeYPosition: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'motion',
+        //     spec: 'change y by %n',
+        //     defaults: [10]
+        // },
+        // setYPosition: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'motion',
+        //     spec: 'set y to %n',
+        //     defaults: [0]
+        // },
+        // bounceOffEdge: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'motion',
+        //     spec: 'if on edge, bounce'
+        // },
+        // xPosition: {
+        //     only: SpriteMorph,
+        //     type: 'reporter',
+        //     category: 'motion',
+        //     spec: 'x position'
+        // },
+        // yPosition: {
+        //     only: SpriteMorph,
+        //     type: 'reporter',
+        //     category: 'motion',
+        //     spec: 'y position'
+        // },
+        // direction: {
+        //     only: SpriteMorph,
+        //     type: 'reporter',
+        //     category: 'motion',
+        //     spec: 'direction'
+        // },
 
-        // Looks
-        doSwitchToCostume: {
-            type: 'command',
-            category: 'looks',
-            spec: 'switch to costume %cst'
-        },
-        doWearNextCostume: {
-            type: 'command',
-            category: 'looks',
-            spec: 'next costume'
-        },
-        getCostumeIdx: {
-            type: 'reporter',
-            category: 'looks',
-            spec: 'costume #'
-        },
-        doSayFor: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'looks',
-            spec: 'say %s for %n secs',
-            defaults: [localize('Hello!'), 2]
-        },
-        bubble: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'looks',
-            spec: 'say %s',
-            defaults: [localize('Hello!')]
-        },
-        doThinkFor: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'looks',
-            spec: 'think %s for %n secs',
-            defaults: [localize('Hmm...'), 2]
-        },
-        doThink: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'looks',
-            spec: 'think %s',
-            defaults: [localize('Hmm...')]
-        },
-        changeEffect: {
-            type: 'command',
-            category: 'looks',
-            spec: 'change %eff effect by %n',
-            defaults: [null, 25]
-        },
-        setEffect: {
-            type: 'command',
-            category: 'looks',
-            spec: 'set %eff effect to %n',
-            defaults: [null, 0]
-        },
-        clearEffects: {
-            type: 'command',
-            category: 'looks',
-            spec: 'clear graphic effects'
-        },
-        changeScale: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'looks',
-            spec: 'change size by %n',
-            defaults: [10]
-        },
-        setScale: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'looks',
-            spec: 'set size to %n %',
-            defaults: [100]
-        },
-        getScale: {
-            only: SpriteMorph,
-            type: 'reporter',
-            category: 'looks',
-            spec: 'size'
-        },
-        show: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'looks',
-            spec: 'show'
-        },
-        hide: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'looks',
-            spec: 'hide'
-        },
-        comeToFront: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'looks',
-            spec: 'go to front'
-        },
-        goBack: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'looks',
-            spec: 'go back %n layers',
-            defaults: [1]
-        },
-        doScreenshot: {
-            type: 'command',
-            category: 'looks',
-            spec: 'save %imgsource as costume named %s',
-            defaults: [['pen trails'], localize('screenshot')]
-        },
+        // // Looks
+        // doSwitchToCostume: {
+        //     type: 'command',
+        //     category: 'looks',
+        //     spec: 'switch to costume %cst'
+        // },
+        // doWearNextCostume: {
+        //     type: 'command',
+        //     category: 'looks',
+        //     spec: 'next costume'
+        // },
+        // getCostumeIdx: {
+        //     type: 'reporter',
+        //     category: 'looks',
+        //     spec: 'costume #'
+        // },
+        // doSayFor: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'looks',
+        //     spec: 'say %s for %n secs',
+        //     defaults: [localize('Hello!'), 2]
+        // },
+        // bubble: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'looks',
+        //     spec: 'say %s',
+        //     defaults: [localize('Hello!')]
+        // },
+        // doThinkFor: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'looks',
+        //     spec: 'think %s for %n secs',
+        //     defaults: [localize('Hmm...'), 2]
+        // },
+        // doThink: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'looks',
+        //     spec: 'think %s',
+        //     defaults: [localize('Hmm...')]
+        // },
+        // changeEffect: {
+        //     type: 'command',
+        //     category: 'looks',
+        //     spec: 'change %eff effect by %n',
+        //     defaults: [null, 25]
+        // },
+        // setEffect: {
+        //     type: 'command',
+        //     category: 'looks',
+        //     spec: 'set %eff effect to %n',
+        //     defaults: [null, 0]
+        // },
+        // clearEffects: {
+        //     type: 'command',
+        //     category: 'looks',
+        //     spec: 'clear graphic effects'
+        // },
+        // changeScale: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'looks',
+        //     spec: 'change size by %n',
+        //     defaults: [10]
+        // },
+        // setScale: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'looks',
+        //     spec: 'set size to %n %',
+        //     defaults: [100]
+        // },
+        // getScale: {
+        //     only: SpriteMorph,
+        //     type: 'reporter',
+        //     category: 'looks',
+        //     spec: 'size'
+        // },
+        // show: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'looks',
+        //     spec: 'show'
+        // },
+        // hide: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'looks',
+        //     spec: 'hide'
+        // },
+        // comeToFront: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'looks',
+        //     spec: 'go to front'
+        // },
+        // goBack: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'looks',
+        //     spec: 'go back %n layers',
+        //     defaults: [1]
+        // },
+        // doScreenshot: {
+        //     type: 'command',
+        //     category: 'looks',
+        //     spec: 'save %imgsource as costume named %s',
+        //     defaults: [['pen trails'], localize('screenshot')]
+        // },
 
-        // Looks - Debugging primitives for development mode
-        reportCostumes: {
-            dev: true,
-            type: 'reporter',
-            category: 'looks',
-            spec: 'wardrobe'
-        },
+        // // Looks - Debugging primitives for development mode
+        // reportCostumes: {
+        //     dev: true,
+        //     type: 'reporter',
+        //     category: 'looks',
+        //     spec: 'wardrobe'
+        // },
 
-        alert: {
-            dev: true,
-            type: 'command',
-            category: 'looks',
-            spec: 'alert %mult%s'
-        },
-        log: {
-            dev: true,
-            type: 'command',
-            category: 'looks',
-            spec: 'console log %mult%s'
-        },
+        // alert: {
+        //     dev: true,
+        //     type: 'command',
+        //     category: 'looks',
+        //     spec: 'alert %mult%s'
+        // },
+        // log: {
+        //     dev: true,
+        //     type: 'command',
+        //     category: 'looks',
+        //     spec: 'console log %mult%s'
+        // },
 
-        // Sound
-        playSound: {
-            type: 'command',
-            category: 'sound',
-            spec: 'play sound %snd'
-        },
-        doPlaySoundUntilDone: {
-            type: 'command',
-            category: 'sound',
-            spec: 'play sound %snd until done'
-        },
-        doStopAllSounds: {
-            type: 'command',
-            category: 'sound',
-            spec: 'stop all sounds'
-        },
-        doRest: {
-            type: 'command',
-            category: 'sound',
-            spec: 'rest for %n beats',
-            defaults: [0.2]
-        },
-        doPlayNote: {
-            type: 'command',
-            category: 'sound',
-            spec: 'play note %n for %n beats',
-            defaults: [60, 0.5]
-        },
-        doChangeTempo: {
-            type: 'command',
-            category: 'sound',
-            spec: 'change tempo by %n',
-            defaults: [20]
-        },
-        doSetTempo: {
-            type: 'command',
-            category: 'sound',
-            spec: 'set tempo to %n bpm',
-            defaults: [60]
-        },
-        getTempo: {
-            type: 'reporter',
-            category: 'sound',
-            spec: 'tempo'
-        },
+        // // Sound
+        // playSound: {
+        //     type: 'command',
+        //     category: 'sound',
+        //     spec: 'play sound %snd'
+        // },
+        // doPlaySoundUntilDone: {
+        //     type: 'command',
+        //     category: 'sound',
+        //     spec: 'play sound %snd until done'
+        // },
+        // doStopAllSounds: {
+        //     type: 'command',
+        //     category: 'sound',
+        //     spec: 'stop all sounds'
+        // },
+        // doRest: {
+        //     type: 'command',
+        //     category: 'sound',
+        //     spec: 'rest for %n beats',
+        //     defaults: [0.2]
+        // },
+        // doPlayNote: {
+        //     type: 'command',
+        //     category: 'sound',
+        //     spec: 'play note %n for %n beats',
+        //     defaults: [60, 0.5]
+        // },
+        // doChangeTempo: {
+        //     type: 'command',
+        //     category: 'sound',
+        //     spec: 'change tempo by %n',
+        //     defaults: [20]
+        // },
+        // doSetTempo: {
+        //     type: 'command',
+        //     category: 'sound',
+        //     spec: 'set tempo to %n bpm',
+        //     defaults: [60]
+        // },
+        // getTempo: {
+        //     type: 'reporter',
+        //     category: 'sound',
+        //     spec: 'tempo'
+        // },
 
-        // Sound - Debugging primitives for development mode
-        reportSounds: {
-            dev: true,
-            type: 'reporter',
-            category: 'sound',
-            spec: 'jukebox'
-        },
+        // // Sound - Debugging primitives for development mode
+        // reportSounds: {
+        //     dev: true,
+        //     type: 'reporter',
+        //     category: 'sound',
+        //     spec: 'jukebox'
+        // },
 
-        // Pen
-        clear: {
-            type: 'command',
-            category: 'pen',
-            spec: 'clear'
-        },
-        down: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'pen',
-            spec: 'pen down'
-        },
-        up: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'pen',
-            spec: 'pen up'
-        },
-        setColor: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'pen',
-            spec: 'set pen color to %clr'
-        },
-        changeHue: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'pen',
-            spec: 'change pen color by %n',
-            defaults: [10]
-        },
-        setHue: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'pen',
-            spec: 'set pen color to %n',
-            defaults: [0]
-        },
-        changeBrightness: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'pen',
-            spec: 'change pen shade by %n',
-            defaults: [10]
-        },
-        setBrightness: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'pen',
-            spec: 'set pen shade to %n',
-            defaults: [100]
-        },
-        changeSize: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'pen',
-            spec: 'change pen size by %n',
-            defaults: [1]
-        },
-        setSize: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'pen',
-            spec: 'set pen size to %n',
-            defaults: [1]
-        },
-        doStamp: {
-            only: SpriteMorph,
-            type: 'command',
-            category: 'pen',
-            spec: 'stamp'
-        },
+        // // Pen
+        // clear: {
+        //     type: 'command',
+        //     category: 'pen',
+        //     spec: 'clear'
+        // },
+        // down: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'pen',
+        //     spec: 'pen down'
+        // },
+        // up: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'pen',
+        //     spec: 'pen up'
+        // },
+        // setColor: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'pen',
+        //     spec: 'set pen color to %clr'
+        // },
+        // changeHue: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'pen',
+        //     spec: 'change pen color by %n',
+        //     defaults: [10]
+        // },
+        // setHue: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'pen',
+        //     spec: 'set pen color to %n',
+        //     defaults: [0]
+        // },
+        // changeBrightness: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'pen',
+        //     spec: 'change pen shade by %n',
+        //     defaults: [10]
+        // },
+        // setBrightness: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'pen',
+        //     spec: 'set pen shade to %n',
+        //     defaults: [100]
+        // },
+        // changeSize: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'pen',
+        //     spec: 'change pen size by %n',
+        //     defaults: [1]
+        // },
+        // setSize: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'pen',
+        //     spec: 'set pen size to %n',
+        //     defaults: [1]
+        // },
+        // doStamp: {
+        //     only: SpriteMorph,
+        //     type: 'command',
+        //     category: 'pen',
+        //     spec: 'stamp'
+        // },
 
         // Control
         receiveGo: {
@@ -1199,45 +1199,45 @@ SpriteMorph.prototype.initBlockMigrations = function () {
 SpriteMorph.prototype.initBlockMigrations();
 
 SpriteMorph.prototype.blockAlternatives = {
-    // motion:
-    turn: ['turnLeft'],
-    turnLeft: ['turn'],
-    changeXPosition: ['changeYPosition', 'setXPosition', 'setYPosition'],
-    setXPosition: ['setYPosition', 'changeXPosition', 'changeYPosition'],
-    changeYPosition: ['changeXPosition', 'setYPosition', 'setXPosition'],
-    setYPosition: ['setXPosition', 'changeYPosition', 'changeXPosition'],
-    xPosition: ['yPosition'],
-    yPosition: ['xPosition'],
+    // // motion:
+    // turn: ['turnLeft'],
+    // turnLeft: ['turn'],
+    // changeXPosition: ['changeYPosition', 'setXPosition', 'setYPosition'],
+    // setXPosition: ['setYPosition', 'changeXPosition', 'changeYPosition'],
+    // changeYPosition: ['changeXPosition', 'setYPosition', 'setXPosition'],
+    // setYPosition: ['setXPosition', 'changeYPosition', 'changeXPosition'],
+    // xPosition: ['yPosition'],
+    // yPosition: ['xPosition'],
 
-    // looks:
-    doSayFor: ['doThinkFor', 'bubble', 'doThink', 'doAsk'],
-    doThinkFor: ['doSayFor', 'doThink', 'bubble', 'doAsk'],
-    bubble: ['doThink', 'doAsk', 'doSayFor', 'doThinkFor'],
-    doThink: ['bubble', 'doAsk', 'doSayFor', 'doThinkFor'],
-    show: ['hide'],
-    hide: ['show'],
-    changeEffect: ['setEffect'],
-    setEffect: ['changeEffect'],
-    changeScale: ['setScale'],
-    setScale: ['changeScale'],
+    // // looks:
+    // doSayFor: ['doThinkFor', 'bubble', 'doThink', 'doAsk'],
+    // doThinkFor: ['doSayFor', 'doThink', 'bubble', 'doAsk'],
+    // bubble: ['doThink', 'doAsk', 'doSayFor', 'doThinkFor'],
+    // doThink: ['bubble', 'doAsk', 'doSayFor', 'doThinkFor'],
+    // show: ['hide'],
+    // hide: ['show'],
+    // changeEffect: ['setEffect'],
+    // setEffect: ['changeEffect'],
+    // changeScale: ['setScale'],
+    // setScale: ['changeScale'],
 
-    // sound:
-    playSound: ['doPlaySoundUntilDone'],
-    doPlaySoundUntilDone: ['playSound'],
-    doChangeTempo: ['doSetTempo'],
-    doSetTempo: ['doChangeTempo'],
+    // // sound:
+    // playSound: ['doPlaySoundUntilDone'],
+    // doPlaySoundUntilDone: ['playSound'],
+    // doChangeTempo: ['doSetTempo'],
+    // doSetTempo: ['doChangeTempo'],
 
-    // pen:
-    clear: ['down', 'up', 'doStamp'],
-    down: ['up', 'clear', 'doStamp'],
-    up: ['down', 'clear', 'doStamp'],
-    doStamp: ['clear', 'down', 'up'],
-    changeHue: ['setHue', 'changeBrightness', 'setBrightness'],
-    setHue: ['changeHue', 'changeBrightness', 'setBrightness'],
-    changeBrightness: ['setBrightness', 'setHue', 'changeHue'],
-    setBrightness: ['changeBrightness', 'setHue', 'changeHue'],
-    changeSize: ['setSize'],
-    setSize: ['changeSize'],
+    // // pen:
+    // clear: ['down', 'up', 'doStamp'],
+    // down: ['up', 'clear', 'doStamp'],
+    // up: ['down', 'clear', 'doStamp'],
+    // doStamp: ['clear', 'down', 'up'],
+    // changeHue: ['setHue', 'changeBrightness', 'setBrightness'],
+    // setHue: ['changeHue', 'changeBrightness', 'setBrightness'],
+    // changeBrightness: ['setBrightness', 'setHue', 'changeHue'],
+    // setBrightness: ['changeBrightness', 'setHue', 'changeHue'],
+    // changeSize: ['setSize'],
+    // setSize: ['changeSize'],
 
     // control:
     receiveGo: ['receiveClick'],
